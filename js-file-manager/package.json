@@ -1,0 +1,16 @@
+{
+  "name": "js-file-manager",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Manange files through Node and Javascript",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
