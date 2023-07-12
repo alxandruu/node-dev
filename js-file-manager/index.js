@@ -3,36 +3,34 @@ import { moveFile, deleteFile, createFile, splitFile } from "./services/fileServ
 import express from "express";
 import bodyParser from "body-parser"
 import multipart from "connect-multiparty"
-const app = express()
+
 env.config();
-
-const PORT = process.env.PORT;
-
+const app = express()
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(multipart());
 
+const PORT = process.env.PORT;
+
 app.post('/file/move', (req, res) => {
-    const { inputFolder, outputFolder } = req.body;
-    moveFile(inputFolder, outputFolder)
+    moveFile(req.body)
         .then(() => {
             res.status(200).send()
         })
         .catch(e => {
+            res.status(500).send(e.message)
             console.log(e)
-            res.status(500).send()
         });
 })
 
 app.post('/file/delete', (req, res) => {
-    const { file } = req.body;
-    deleteFile(file)
+    deleteFile(req.body.file)
         .then(() => {
             res.status(200).send()
         })
         .catch(e => {
+            res.status(500).send(e.message)
             console.log(e)
-            res.status(500).send()
         });
 })
 
@@ -42,8 +40,8 @@ app.post('/file/create', (req, res) => {
             res.status(200).send()
         })
         .catch(e => {
-            console.log(e)
             res.status(500).send()
+            console.log(e)
         });
 })
 
@@ -54,11 +52,11 @@ app.post('/file/split', (req, res) => {
             deleteFile(route);
         })
         .catch(e => {
-            console.log(e)
             res.status(500).send()
+            console.log(e)
         });
 })
 
 app.listen(PORT, () => {
-    console.log(`File Manager listening on port ${PORT}`)
+    console.log(`File Manager Server listening on port ${PORT}`)
 })
