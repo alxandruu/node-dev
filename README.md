@@ -1,3 +1,5 @@
+
+
 # JS File Manager
 Microservice API done with Express and Node FS, where you can manage file.
 
@@ -15,7 +17,7 @@ To use it you need a template in HTML format and a JSON with the data to fill in
 
 What I like is that it is very flexible in terms of template, since you can insert Bootstrap, or fonts from Google Fonts in the HTML.
 
-<h2>Variables</h2>
+<h3>Variables</h3>
 <ul>
   <li><b> --text:KEY </b> -> Prints standard text. Change KEY to your property name. <i>Examples: <b>--text:doctor</b> / <b>--text:client.code</b></i></li>
   <li><b> --repeat:KEY </b> -> Repeats a container with data dynamically. Has to used inside an HTML tag. Change KEY to your property name. Example:
@@ -30,7 +32,7 @@ What I like is that it is very flexible in terms of template, since you can inse
      
   </li>
 </ul>
-<h2>Funcionalities</h2>
+<h3>Funcionalities</h3>
 <ul>
   <li>
     <p><b>Allows printing a JSON object. </b><br/>Example JSON replacement variable and usage.</p>
@@ -59,6 +61,9 @@ What I like is that it is very flexible in terms of template, since you can inse
 
   </li>
 </ul>
-<h2>Example of a generated PDF</h2>
 
+# TS-MAIL-SENDER
+API Microservice that sends emails using Express and NodeMailer. 
+
+This microservice was created to experimient node with typescript
 
