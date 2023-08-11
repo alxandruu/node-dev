@@ -16,5 +16,5 @@ _book
 *.epub
 *.mobi
 *.pdf
-
-ts-mail-sender
+dist
+package-lock.json
