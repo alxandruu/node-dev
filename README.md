@@ -11,9 +11,6 @@ The most prominent feature is an endpoint where you can split a file from an asc
 # JS PDF Generator
 Microservice API done with Express and Puppetter , where can you generate PDFs passing an HTML template.
 
-I was looking for a PDF generator in Node similar to Thymeleaf in SpringBoot but I couldn't find one that I liked 🥲
-So I created my own that fulfilled the purpose of generating a PDF.
-
 To use it you need a template in HTML format and a JSON with the data to fill in the template.
 
 What I like is that it is very flexible in terms of template, since you can insert Bootstrap, or fonts from Google Fonts in the HTML.
