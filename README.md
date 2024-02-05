@@ -65,3 +65,16 @@ API Microservice that sends emails using Express and NodeMailer.
 
 This microservice was created to experimient node with typescript
 
+# ONETRUST-BLOCK-CHECKER
+Simple microservice/web scraper to check in a site that uses Onetrust, if Autoblock is blocking determinated scripts. The analysis is done by keywords and returns the sites that contains the keywords. Example body: 
+<code>
+{
+    "sites": [
+        "https://siteone.com",
+    ],
+    "check": [
+        "keyword1",
+        "keyword1"
+    ]
+}
+</code>
