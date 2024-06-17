@@ -78,3 +78,5 @@ Simple microservice/web scraper to check in a site that uses Onetrust, if Autobl
     ]
 }
 </code>
+
+[Node Notes](./NOTES.md)
